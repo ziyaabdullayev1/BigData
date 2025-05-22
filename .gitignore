@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Hadoop temp/output
+/_temp.bat
+/output_*/
+/kaggle_output_*/
+
+# IDE files
+.vscode/
+*.sublime-project
+*.sublime-workspace
