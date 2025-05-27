@@ -5,9 +5,23 @@ import threading
 import os
 import time
 from datetime import datetime
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import pandas as pd
+
+try:
+    import matplotlib
+    matplotlib.use('TkAgg')  # Set the backend before importing pyplot
+    import matplotlib.pyplot as plt
+    from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+except ImportError as e:
+    print(f"Error importing matplotlib: {e}")
+    print("Please ensure matplotlib is installed: pip install matplotlib")
+    raise
+
+try:
+    import pandas as pd
+except ImportError as e:
+    print(f"Error importing pandas: {e}")
+    print("Please ensure pandas is installed: pip install pandas")
+    raise
 
 # === Constants ===
 HADOOP_STREAMING_JAR = r"C:/hadoop-2.7.7/share/hadoop/tools/lib/hadoop-streaming-2.7.7.jar"
