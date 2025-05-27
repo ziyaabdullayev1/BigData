@@ -1,0 +1,669 @@
+{
+    "test_timestamp": "2025-05-27 19:30:27",
+    "datasets": {
+        "retail": {
+            "transactions": {
+                "file": "retail_transaction_amounts.txt",
+                "record_count": 407664
+            },
+            "quantities": {
+                "file": "retail_quantities.txt",
+                "record_count": 407664
+            },
+            "prices": {
+                "file": "retail_prices.txt",
+                "record_count": 407664
+            }
+        },
+        "ecommerce": {
+            "purchases": {
+                "file": "ecom_purchase_amounts.txt",
+                "record_count": 350
+            },
+            "ratings": {
+                "file": "ecom_ratings.txt",
+                "record_count": 350
+            },
+            "days_since_purchase": {
+                "file": "ecom_days_since_purchase.txt",
+                "record_count": 350
+            },
+            "items": {
+                "file": "ecom_items_purchased.txt",
+                "record_count": 350
+            }
+        }
+    },
+    "functions": [
+        {
+            "function": "median",
+            "input_file": "retail_transaction_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.9105043411254883,
+                "records_processed": 407664.0,
+                "throughput": 447734.27383781644,
+                "avg_cpu_usage": 12.55,
+                "max_cpu_usage": 12.9,
+                "avg_memory_mb": 68.1484375,
+                "max_memory_mb": 76.3984375,
+                "plot_file": "performance_plot_median_20250527_193028.png"
+            },
+            "timestamp": "2025-05-27 19:30:29",
+            "result": "Median\t11.9",
+            "dataset": "retail",
+            "data_type": "transactions"
+        },
+        {
+            "function": "stddev",
+            "input_file": "retail_transaction_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.9985952377319336,
+                "records_processed": 407664.0,
+                "throughput": 408237.4766035433,
+                "avg_cpu_usage": 23.900000000000002,
+                "max_cpu_usage": 33.7,
+                "avg_memory_mb": 67.822265625,
+                "max_memory_mb": 75.70703125,
+                "plot_file": "performance_plot_stddev_20250527_193031.png"
+            },
+            "timestamp": "2025-05-27 19:30:31",
+            "result": "StandardDeviation\t77.14996309341068",
+            "dataset": "retail",
+            "data_type": "transactions"
+        },
+        {
+            "function": "minmax",
+            "input_file": "retail_transaction_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.9963197708129883,
+                "records_processed": 407664.0,
+                "throughput": 409169.8387831346,
+                "avg_cpu_usage": 25.25,
+                "max_cpu_usage": 27.5,
+                "avg_memory_mb": 75.501953125,
+                "max_memory_mb": 91.14453125,
+                "plot_file": "performance_plot_minmax_20250527_193033.png"
+            },
+            "timestamp": "2025-05-27 19:30:34",
+            "result": "Min-Max\t0.0010-15818.4000",
+            "dataset": "retail",
+            "data_type": "transactions"
+        },
+        {
+            "function": "percentile",
+            "input_file": "retail_transaction_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 1.4965994358062744,
+                "records_processed": 407664.0,
+                "throughput": 272393.5277847917,
+                "avg_cpu_usage": 50.400000000000006,
+                "max_cpu_usage": 67.2,
+                "avg_memory_mb": 68.33203125,
+                "max_memory_mb": 76.5546875,
+                "plot_file": "performance_plot_percentile_20250527_193037.png"
+            },
+            "timestamp": "2025-05-27 19:30:37",
+            "result": "90thPercentile\t35.7",
+            "dataset": "retail",
+            "data_type": "transactions"
+        },
+        {
+            "function": "skewness",
+            "input_file": "retail_transaction_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 1.133195400238037,
+                "records_processed": 407664.0,
+                "throughput": 359747.3127003223,
+                "avg_cpu_usage": 32.2,
+                "max_cpu_usage": 33.6,
+                "avg_memory_mb": 67.970703125,
+                "max_memory_mb": 75.80859375,
+                "plot_file": "performance_plot_skewness_20250527_193039.png"
+            },
+            "timestamp": "2025-05-27 19:30:40",
+            "result": "Skewness\t58.6123573291829",
+            "dataset": "retail",
+            "data_type": "transactions"
+        },
+        {
+            "function": "median",
+            "input_file": "retail_quantities.txt",
+            "metrics": {
+                "runtime_seconds": 0.9849467277526855,
+                "records_processed": 407664.0,
+                "throughput": 413894.46607955237,
+                "avg_cpu_usage": 34.55,
+                "max_cpu_usage": 38.1,
+                "avg_memory_mb": 68.244140625,
+                "max_memory_mb": 76.4453125,
+                "plot_file": "performance_plot_median_20250527_193042.png"
+            },
+            "timestamp": "2025-05-27 19:30:43",
+            "result": "Median\t5.0",
+            "dataset": "retail",
+            "data_type": "quantities"
+        },
+        {
+            "function": "stddev",
+            "input_file": "retail_quantities.txt",
+            "metrics": {
+                "runtime_seconds": 1.0059456825256348,
+                "records_processed": 407664.0,
+                "throughput": 405254.48548720364,
+                "avg_cpu_usage": 35.7,
+                "max_cpu_usage": 40.2,
+                "avg_memory_mb": 68.10546875,
+                "max_memory_mb": 75.9609375,
+                "plot_file": "performance_plot_stddev_20250527_193045.png"
+            },
+            "timestamp": "2025-05-27 19:30:46",
+            "result": "StandardDeviation\t96.8406285007459",
+            "dataset": "retail",
+            "data_type": "quantities"
+        },
+        {
+            "function": "minmax",
+            "input_file": "retail_quantities.txt",
+            "metrics": {
+                "runtime_seconds": 1.0297966003417969,
+                "records_processed": 407664.0,
+                "throughput": 395868.4655442574,
+                "avg_cpu_usage": 30.9,
+                "max_cpu_usage": 34.1,
+                "avg_memory_mb": 75.685546875,
+                "max_memory_mb": 91.40234375,
+                "plot_file": "performance_plot_minmax_20250527_193048.png"
+            },
+            "timestamp": "2025-05-27 19:30:48",
+            "result": "Min-Max\t1.0000-19152.0000",
+            "dataset": "retail",
+            "data_type": "quantities"
+        },
+        {
+            "function": "percentile",
+            "input_file": "retail_quantities.txt",
+            "metrics": {
+                "runtime_seconds": 0.9674837589263916,
+                "records_processed": 407664.0,
+                "throughput": 421365.2128407626,
+                "avg_cpu_usage": 30.549999999999997,
+                "max_cpu_usage": 34.4,
+                "avg_memory_mb": 68.373046875,
+                "max_memory_mb": 76.52734375,
+                "plot_file": "performance_plot_percentile_20250527_193050.png"
+            },
+            "timestamp": "2025-05-27 19:30:51",
+            "result": "90thPercentile\t24.0",
+            "dataset": "retail",
+            "data_type": "quantities"
+        },
+        {
+            "function": "skewness",
+            "input_file": "retail_quantities.txt",
+            "metrics": {
+                "runtime_seconds": 1.159536600112915,
+                "records_processed": 407664.0,
+                "throughput": 351574.9308476351,
+                "avg_cpu_usage": 30.950000000000003,
+                "max_cpu_usage": 33.2,
+                "avg_memory_mb": 67.955078125,
+                "max_memory_mb": 75.7890625,
+                "plot_file": "performance_plot_skewness_20250527_193053.png"
+            },
+            "timestamp": "2025-05-27 19:30:54",
+            "result": "Skewness\t79.91740805541565",
+            "dataset": "retail",
+            "data_type": "quantities"
+        },
+        {
+            "function": "median",
+            "input_file": "retail_prices.txt",
+            "metrics": {
+                "runtime_seconds": 1.0032293796539307,
+                "records_processed": 407664.0,
+                "throughput": 406351.7359715142,
+                "avg_cpu_usage": 29.8,
+                "max_cpu_usage": 30.6,
+                "avg_memory_mb": 68.22265625,
+                "max_memory_mb": 76.5078125,
+                "plot_file": "performance_plot_median_20250527_193056.png"
+            },
+            "timestamp": "2025-05-27 19:30:56",
+            "result": "Median\t1.95",
+            "dataset": "retail",
+            "data_type": "prices"
+        },
+        {
+            "function": "stddev",
+            "input_file": "retail_prices.txt",
+            "metrics": {
+                "runtime_seconds": 1.0511910915374756,
+                "records_processed": 407664.0,
+                "throughput": 387811.50571182,
+                "avg_cpu_usage": 30.4,
+                "max_cpu_usage": 31.0,
+                "avg_memory_mb": 67.873046875,
+                "max_memory_mb": 75.7578125,
+                "plot_file": "performance_plot_stddev_20250527_193059.png"
+            },
+            "timestamp": "2025-05-27 19:30:59",
+            "result": "StandardDeviation\t34.75792197941152",
+            "dataset": "retail",
+            "data_type": "prices"
+        },
+        {
+            "function": "minmax",
+            "input_file": "retail_prices.txt",
+            "metrics": {
+                "runtime_seconds": 1.1792609691619873,
+                "records_processed": 407664.0,
+                "throughput": 345694.4736241855,
+                "avg_cpu_usage": 41.3,
+                "max_cpu_usage": 41.4,
+                "avg_memory_mb": 76.453125,
+                "max_memory_mb": 93.04296875,
+                "plot_file": "performance_plot_minmax_20250527_193102.png"
+            },
+            "timestamp": "2025-05-27 19:31:02",
+            "result": "Min-Max\t0.0010-10953.5000",
+            "dataset": "retail",
+            "data_type": "prices"
+        },
+        {
+            "function": "percentile",
+            "input_file": "retail_prices.txt",
+            "metrics": {
+                "runtime_seconds": 1.0230159759521484,
+                "records_processed": 407664.0,
+                "throughput": 398492.3105629667,
+                "avg_cpu_usage": 37.900000000000006,
+                "max_cpu_usage": 43.2,
+                "avg_memory_mb": 68.353515625,
+                "max_memory_mb": 76.5703125,
+                "plot_file": "performance_plot_percentile_20250527_193104.png"
+            },
+            "timestamp": "2025-05-27 19:31:05",
+            "result": "90thPercentile\t6.75",
+            "dataset": "retail",
+            "data_type": "prices"
+        },
+        {
+            "function": "skewness",
+            "input_file": "retail_prices.txt",
+            "metrics": {
+                "runtime_seconds": 1.133730411529541,
+                "records_processed": 407664.0,
+                "throughput": 359577.5467026693,
+                "avg_cpu_usage": 31.450000000000003,
+                "max_cpu_usage": 32.6,
+                "avg_memory_mb": 67.9921875,
+                "max_memory_mb": 75.8046875,
+                "plot_file": "performance_plot_skewness_20250527_193107.png"
+            },
+            "timestamp": "2025-05-27 19:31:08",
+            "result": "Skewness\t235.0659971917707",
+            "dataset": "retail",
+            "data_type": "prices"
+        },
+        {
+            "function": "median",
+            "input_file": "ecom_purchase_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010094642639160156,
+                "records_processed": 350.0,
+                "throughput": 346718.5640056684,
+                "avg_cpu_usage": 19.65,
+                "max_cpu_usage": 39.3,
+                "avg_memory_mb": 59.88671875,
+                "max_memory_mb": 59.8984375,
+                "plot_file": "performance_plot_median_20250527_193109.png"
+            },
+            "timestamp": "2025-05-27 19:31:10",
+            "result": "Median\t775.2",
+            "dataset": "ecommerce",
+            "data_type": "purchases"
+        },
+        {
+            "function": "stddev",
+            "input_file": "ecom_purchase_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 18.7,
+                "max_cpu_usage": 37.4,
+                "avg_memory_mb": 60.09375,
+                "max_memory_mb": 60.10546875,
+                "plot_file": "performance_plot_stddev_20250527_193111.png"
+            },
+            "timestamp": "2025-05-27 19:31:11",
+            "result": "StandardDeviation\t361.5410986634514",
+            "dataset": "ecommerce",
+            "data_type": "purchases"
+        },
+        {
+            "function": "minmax",
+            "input_file": "ecom_purchase_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.0009927749633789062,
+                "records_processed": 350.0,
+                "throughput": 352547.16618635925,
+                "avg_cpu_usage": 54.0,
+                "max_cpu_usage": 66.7,
+                "avg_memory_mb": 60.0625,
+                "max_memory_mb": 60.09375,
+                "plot_file": "performance_plot_minmax_20250527_193112.png"
+            },
+            "timestamp": "2025-05-27 19:31:13",
+            "result": "Min-Max\t410.8000-1520.1000",
+            "dataset": "ecommerce",
+            "data_type": "purchases"
+        },
+        {
+            "function": "percentile",
+            "input_file": "ecom_purchase_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.006006002426147461,
+                "records_processed": 350.0,
+                "throughput": 58275.03473462744,
+                "avg_cpu_usage": 57.8,
+                "max_cpu_usage": 81.8,
+                "avg_memory_mb": 60.0234375,
+                "max_memory_mb": 60.03515625,
+                "plot_file": "performance_plot_percentile_20250527_193114.png"
+            },
+            "timestamp": "2025-05-27 19:31:15",
+            "result": "90thPercentile\t1460.5",
+            "dataset": "ecommerce",
+            "data_type": "purchases"
+        },
+        {
+            "function": "skewness",
+            "input_file": "ecom_purchase_amounts.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010085105895996094,
+                "records_processed": 350.0,
+                "throughput": 347046.43026004726,
+                "avg_cpu_usage": 13.7,
+                "max_cpu_usage": 27.4,
+                "avg_memory_mb": 60.16796875,
+                "max_memory_mb": 60.1796875,
+                "plot_file": "performance_plot_skewness_20250527_193116.png"
+            },
+            "timestamp": "2025-05-27 19:31:16",
+            "result": "Skewness\t0.560152715961943",
+            "dataset": "ecommerce",
+            "data_type": "purchases"
+        },
+        {
+            "function": "median",
+            "input_file": "ecom_ratings.txt",
+            "metrics": {
+                "runtime_seconds": 0.0009975433349609375,
+                "records_processed": 350.0,
+                "throughput": 350861.9502868069,
+                "avg_cpu_usage": 16.55,
+                "max_cpu_usage": 33.1,
+                "avg_memory_mb": 59.97265625,
+                "max_memory_mb": 59.984375,
+                "plot_file": "performance_plot_median_20250527_193118.png"
+            },
+            "timestamp": "2025-05-27 19:31:18",
+            "result": "Median\t4.1",
+            "dataset": "ecommerce",
+            "data_type": "ratings"
+        },
+        {
+            "function": "stddev",
+            "input_file": "ecom_ratings.txt",
+            "metrics": {
+                "runtime_seconds": 0.0035343170166015625,
+                "records_processed": 350.0,
+                "throughput": 99029.03399892067,
+                "avg_cpu_usage": 33.45,
+                "max_cpu_usage": 33.6,
+                "avg_memory_mb": 60.44140625,
+                "max_memory_mb": 60.453125,
+                "plot_file": "performance_plot_stddev_20250527_193119.png"
+            },
+            "timestamp": "2025-05-27 19:31:20",
+            "result": "StandardDeviation\t0.5797086530740934",
+            "dataset": "ecommerce",
+            "data_type": "ratings"
+        },
+        {
+            "function": "minmax",
+            "input_file": "ecom_ratings.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010693073272705078,
+                "records_processed": 350.0,
+                "throughput": 327314.6934225195,
+                "avg_cpu_usage": 68.75,
+                "max_cpu_usage": 100.0,
+                "avg_memory_mb": 60.279296875,
+                "max_memory_mb": 60.29296875,
+                "plot_file": "performance_plot_minmax_20250527_193121.png"
+            },
+            "timestamp": "2025-05-27 19:31:22",
+            "result": "Min-Max\t3.0000-4.9000",
+            "dataset": "ecommerce",
+            "data_type": "ratings"
+        },
+        {
+            "function": "percentile",
+            "input_file": "ecom_ratings.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010001659393310547,
+                "records_processed": 350.0,
+                "throughput": 349941.93087008345,
+                "avg_cpu_usage": 14.15,
+                "max_cpu_usage": 28.3,
+                "avg_memory_mb": 60.0703125,
+                "max_memory_mb": 60.08203125,
+                "plot_file": "performance_plot_percentile_20250527_193123.png"
+            },
+            "timestamp": "2025-05-27 19:31:24",
+            "result": "90thPercentile\t4.8",
+            "dataset": "ecommerce",
+            "data_type": "ratings"
+        },
+        {
+            "function": "skewness",
+            "input_file": "ecom_ratings.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 15.65,
+                "max_cpu_usage": 31.3,
+                "avg_memory_mb": 60.07421875,
+                "max_memory_mb": 60.0859375,
+                "plot_file": "performance_plot_skewness_20250527_193124.png"
+            },
+            "timestamp": "2025-05-27 19:31:25",
+            "result": "Skewness\t-0.1262760781878726",
+            "dataset": "ecommerce",
+            "data_type": "ratings"
+        },
+        {
+            "function": "median",
+            "input_file": "ecom_days_since_purchase.txt",
+            "metrics": {
+                "runtime_seconds": 0.0009999275207519531,
+                "records_processed": 350.0,
+                "throughput": 350025.3695755842,
+                "avg_cpu_usage": 21.7,
+                "max_cpu_usage": 43.4,
+                "avg_memory_mb": 60.40625,
+                "max_memory_mb": 60.41796875,
+                "plot_file": "performance_plot_median_20250527_193126.png"
+            },
+            "timestamp": "2025-05-27 19:31:27",
+            "result": "Median\t23.0",
+            "dataset": "ecommerce",
+            "data_type": "days_since_purchase"
+        },
+        {
+            "function": "stddev",
+            "input_file": "ecom_days_since_purchase.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 14.7,
+                "max_cpu_usage": 29.4,
+                "avg_memory_mb": 60.1484375,
+                "max_memory_mb": 60.16015625,
+                "plot_file": "performance_plot_stddev_20250527_193128.png"
+            },
+            "timestamp": "2025-05-27 19:31:28",
+            "result": "StandardDeviation\t13.421598189455072",
+            "dataset": "ecommerce",
+            "data_type": "days_since_purchase"
+        },
+        {
+            "function": "minmax",
+            "input_file": "ecom_days_since_purchase.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 22.1,
+                "max_cpu_usage": 44.2,
+                "avg_memory_mb": 60.169921875,
+                "max_memory_mb": 60.18359375,
+                "plot_file": "performance_plot_minmax_20250527_193129.png"
+            },
+            "timestamp": "2025-05-27 19:31:30",
+            "result": "Min-Max\t9.0000-63.0000",
+            "dataset": "ecommerce",
+            "data_type": "days_since_purchase"
+        },
+        {
+            "function": "percentile",
+            "input_file": "ecom_days_since_purchase.txt",
+            "metrics": {
+                "runtime_seconds": 0.000997781753540039,
+                "records_processed": 350.0,
+                "throughput": 350778.1123058542,
+                "avg_cpu_usage": 16.3,
+                "max_cpu_usage": 32.6,
+                "avg_memory_mb": 60.1796875,
+                "max_memory_mb": 60.19140625,
+                "plot_file": "performance_plot_percentile_20250527_193131.png"
+            },
+            "timestamp": "2025-05-27 19:31:32",
+            "result": "90thPercentile\t47.0",
+            "dataset": "ecommerce",
+            "data_type": "days_since_purchase"
+        },
+        {
+            "function": "skewness",
+            "input_file": "ecom_days_since_purchase.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010035037994384766,
+                "records_processed": 350.0,
+                "throughput": 348777.9520076028,
+                "avg_cpu_usage": 9.0,
+                "max_cpu_usage": 18.0,
+                "avg_memory_mb": 59.94140625,
+                "max_memory_mb": 59.9609375,
+                "plot_file": "performance_plot_skewness_20250527_193133.png"
+            },
+            "timestamp": "2025-05-27 19:31:33",
+            "result": "Skewness\t0.6746376757868805",
+            "dataset": "ecommerce",
+            "data_type": "days_since_purchase"
+        },
+        {
+            "function": "median",
+            "input_file": "ecom_items_purchased.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 18.95,
+                "max_cpu_usage": 37.9,
+                "avg_memory_mb": 59.8046875,
+                "max_memory_mb": 59.81640625,
+                "plot_file": "performance_plot_median_20250527_193134.png"
+            },
+            "timestamp": "2025-05-27 19:31:35",
+            "result": "Median\t12.0",
+            "dataset": "ecommerce",
+            "data_type": "items"
+        },
+        {
+            "function": "stddev",
+            "input_file": "ecom_items_purchased.txt",
+            "metrics": {
+                "runtime_seconds": 0.0009882450103759766,
+                "records_processed": 350.0,
+                "throughput": 354163.1845597105,
+                "avg_cpu_usage": 6.65,
+                "max_cpu_usage": 13.3,
+                "avg_memory_mb": 59.984375,
+                "max_memory_mb": 59.99609375,
+                "plot_file": "performance_plot_stddev_20250527_193135.png"
+            },
+            "timestamp": "2025-05-27 19:31:36",
+            "result": "StandardDeviation\t4.150043029036825",
+            "dataset": "ecommerce",
+            "data_type": "items"
+        },
+        {
+            "function": "minmax",
+            "input_file": "ecom_items_purchased.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 9.55,
+                "max_cpu_usage": 19.1,
+                "avg_memory_mb": 60.080078125,
+                "max_memory_mb": 60.09375,
+                "plot_file": "performance_plot_minmax_20250527_193137.png"
+            },
+            "timestamp": "2025-05-27 19:31:37",
+            "result": "Min-Max\t7.0000-21.0000",
+            "dataset": "ecommerce",
+            "data_type": "items"
+        },
+        {
+            "function": "percentile",
+            "input_file": "ecom_items_purchased.txt",
+            "metrics": {
+                "runtime_seconds": 0.0010101795196533203,
+                "records_processed": 350.0,
+                "throughput": 346473.0705687987,
+                "avg_cpu_usage": 13.0,
+                "max_cpu_usage": 26.0,
+                "avg_memory_mb": 59.99609375,
+                "max_memory_mb": 60.0078125,
+                "plot_file": "performance_plot_percentile_20250527_193138.png"
+            },
+            "timestamp": "2025-05-27 19:31:39",
+            "result": "90thPercentile\t20.0",
+            "dataset": "ecommerce",
+            "data_type": "items"
+        },
+        {
+            "function": "skewness",
+            "input_file": "ecom_items_purchased.txt",
+            "metrics": {
+                "runtime_seconds": 0.0,
+                "records_processed": 350.0,
+                "throughput": 0.0,
+                "avg_cpu_usage": 10.55,
+                "max_cpu_usage": 21.1,
+                "avg_memory_mb": 60.1484375,
+                "max_memory_mb": 60.16015625,
+                "plot_file": "performance_plot_skewness_20250527_193140.png"
+            },
+            "timestamp": "2025-05-27 19:31:40",
+            "result": "Skewness\t0.6463744431217117",
+            "dataset": "ecommerce",
+            "data_type": "items"
+        }
+    ]
+}

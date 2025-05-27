@@ -138,11 +138,11 @@ def extract_result_from_hdfs(output_dir):
         output_text.insert(tk.END, f"\n[HDFS Output]\n{result}\n")
         lines = result.strip().splitlines()
         for line in lines:
-            parts = line.strip().split()
+            parts = line.strip().split('\t')
             if len(parts) == 2:
                 key, val = parts[0], parts[1]
-                if "NormalizedValue" in key:
-                    return "Min-Max Normalization", "Multiple Values"
+                if key == "Min-Max":
+                    return "Min-Max Normalization", val
                 return key, val
         return "Unknown", "N/A"
     except Exception as e:
